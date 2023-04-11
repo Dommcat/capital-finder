@@ -41,9 +41,6 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         message += " " + platform.python_version()
         self.wfile.write(message.encode())
-
         return
 
 
-handle = handler
-handle.do_GET()
