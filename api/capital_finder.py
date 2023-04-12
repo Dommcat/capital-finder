@@ -21,18 +21,16 @@ class handler(BaseHTTPRequestHandler):
         if country:
             country_url = f"https://restcountries.com/v3.1/name/{country}"
             req = requests.get(country_url)
-            print("country", req.content)
             data = req.json()
             capital_name = data[0]["capital"][0]
-            retrieved_capital = f"The capital of {country.title()} is {capital_name}"
+            message = f"The capital of {country.title()} is {capital_name}"
 
         elif capital:
             capital_url = f"https://restcountries.com/v3.1/capital/{capital}"
             req = requests.get(capital_url)
-            print("capital", req.content)
             data = req.json()
             country_name = data[0]["name"]["common"]
-            retrieved_capital = f"{capital.title()} is capital of {country_name} "
+            message = f"{capital.title()} is capital of {country_name} "
         else:
             message = "Please input a capital city or country"
 
