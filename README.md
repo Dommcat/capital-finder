@@ -34,7 +34,7 @@
 ## Links and resources:
 [Requests](https://requests.readthedocs.io/en/latest/)
 
-#Referenced Tyler Huntly Code So
+
 
 ## SETUP
 ```
@@ -45,11 +45,21 @@ pip Freeze >requirements.txt
 
 pip install pytest
 
+Vercel Cli 
+
 ``` 
-
-## Tests:
-
 
 
 ## Link to code:
-[capital_finder](/api_file/capital_finder.py)
+
+[capital_finder](api/capital_finder.py)
+
+
+
+
+## Tests:
+[capital_finder Test 1 capital ](https://capital-finder-azure.vercel.app/api/capital_finder?capital=santiago)
+
+[capital_finder Test 2 country](https://capital-finder-azure.vercel.app/api/capital_finder?country=chile)
+
+
