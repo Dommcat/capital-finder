@@ -30,6 +30,7 @@ class handler(BaseHTTPRequestHandler):
             req = requests.get(capital_url)
             data = req.json()
             country_name = data[0]["name"]["common"]
+            print ('country_name',country_name)
             message = f"{capital.title()} is capital of {country_name} "
         else:
             message = "Please input a capital city or country"
@@ -37,7 +38,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
-        message += " " + platform.python_version()
+        # message += " " + platform.python_version()
         self.wfile.write(message.encode())
         return
 
